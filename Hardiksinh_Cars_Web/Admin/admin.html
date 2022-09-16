@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <title>Admin Page</title>
+  </head>
+
+  <body>
+    <div class="container-fluid" style="position: fixed">
+      <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+          >
+            <img
+              src="../../assets/black logo.jpg"
+              alt="companyLogo"
+              style="width: 219px; margin-left: -8px; margin-top: 8px"
+            />
+            <div class="dropdown-divider"></div>
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <li>
+                <a
+                  data-bs-toggle="collapse"
+                  class="nav-link active"
+                  style="padding: 10px"
+                  ondblclick="dashboard()"
+                  onclick="dash()"
+                  id="h1"
+                >
+                  <i class="fs-4 bi-speedometer2"></i>
+                  <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  data-bs-toggle="collapse"
+                  class="nav-link"
+                  style="padding: 10px"
+                  id="h2"
+                  ondblclick="graph()"
+                  onclick="graphJS()"
+                >
+                  <i class="fs-4 bi-bar-chart"></i>
+                  <span class="d-sm-inline">Graph</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  data-bs-toggle="collapse"
+                  class="nav-link"
+                  style="padding: 10px"
+                  id="h3"
+                  ondblclick="product()"
+                  onclick="producT()"
+                >
+                  <i class="fs-4 bi-grid"></i>
+                  <span class="d-sm-inline">Products</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-people"></i>
+                  <span class="d-sm-inline">Customers</span>
+                </a>
+              </li>
+            </ul>
+            <hr />
+            <div class="dropdown pb-4">
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                onclick="dropdown()"
+              >
+                <img
+                  src="https://img.freepik.com/free-vector/botanical-capital-letter-r-vector_53876-127456.jpg?w=360"
+                  alt="hugenerd"
+                  width="30"
+                  height="30"
+                  class="rounded-circle"
+                />
+                <span class="d-none d-sm-inline mx-1">Hardiksinh Rajput</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark text-small shadow"
+                id="dropdown-menu"
+                style="margin-top: -200px; margin-left: 34px"
+              >
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../Login/login.html"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col py-3"></div>
+      </div>
+    </div>
+
+    <!-- dashboard -->
+    <div
+      id="card"
+      class="card"
+      style="
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 47px;
+        border-radius: 20px;
+        display: block;
+      "
+    >
+      <div
+        class="card-header"
+        style="
+          border-radius: 20px;
+          font-size: larger;
+          background-color: #00000021;
+          color: black;
+          text-align: center;
+        "
+      >
+        Dashboard
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          background-color: #ff00002b;
+          border-radius: 20px;
+        "
+      >
+        <div>
+          <div class="card-body">
+            <h5 class="card-title">Hello Hardiksinh</h5>
+            <p class="card-text">Welcom to our WebSide Admin Panel</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://telegram.org/file/811140642/1/nM2DU-Ywr3A/e5809db818346b4be5"
+            alt="AdminImg"
+            style="
+              width: 300px;
+              margin: 15px 18px 15px 18px;
+              border-radius: 155px;
+            "
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- product -->
+    <div
+      id="product"
+      style="
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 47px;
+        border-radius: 20px;
+        display: none;
+      "
+    >
+      <h1 style="margin-left: 75px">Available cars in ShowRoom</h1>
+      <p style="margin-left: 75px">
+        -------------------------------------------------------------------------------
+      </p>
+      <br />
+      <table class="table table-bordered border-primary">
+        <tr>
+          <th>No</th>
+          <th>Car Name</th>
+          <th>price</th>
+          <th>Engine Displacement (cc)</th>
+          <th>Available</th>
+          <th>Total Stock</th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>DEFENDER</td>
+          <td>Rs. 80.72 Lakh</td>
+          <td>4997 cc</td>
+          <td>Yes</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>HARRIER</td>
+          <td>Rs. 22.20 Lakh</td>
+          <td>1956 cc</td>
+          <td>No</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>TOYOTA FORTUNER LEGENDER</td>
+          <td>Rs. 42.05 Lakh</td>
+          <td>2755 cc</td>
+          <td>Yes</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>LEXUS NX(Automatic (CVT).</td>
+          <td>Rs. 64.90 Lakh</td>
+          <td>2494</td>
+          <td>Yes</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Mahindra New Thar 2020</td>
+          <td>Rs. 13.53 Lakh</td>
+          <td>1997 to 2184 cc</td>
+          <td>Yes</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>RANGE ROVER SPORT</td>
+          <td>Rs. 1.64 - 1.84 Crore</td>
+          <td>2993 cc</td>
+          <td>No</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>SKODA OCTAVIA(2020)</td>
+          <td>Rs. 26.85 - 29.85 Lakh</td>
+          <td>2000 cc</td>
+          <td>No</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>LAMBORGHINI URUS</td>
+          <td>Rs. 3.10 Crore</td>
+          <td>3996 cc</td>
+          <td>Yes</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>ROLLS ROYCE CULLINAN</td>
+          <td>Rs. 6.95 Crore</td>
+          <td>6.75-litre V12 engine</td>
+          <td>Yes</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>BUGATI CHIRON(Automatic)</td>
+          <td>Rs. 2.40 Crore</td>
+          <td>7993 cc</td>
+          <td>Yes</td>
+          <td>2</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- graph -->
+    <div
+      id="graph"
+      style="
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 47px;
+        border-radius: 20px;
+        display: none;
+      "
+    >
+      <canvas id="chart"></canvas>
+      <script src="./graph.js"></script>
+      <table class="table table-dark table-hover" style="text-align: center">
+        <tr>
+          <th>Year</th>
+          <th>coustomers in lakhs</th>
+          <th>selling cars in lakhs</th>
+          <th>company valuation in Crore</th>
+        </tr>
+        <tr>
+          <td>2017</td>
+          <td>5</td>
+          <td>1.7</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>2018</td>
+          <td>6</td>
+          <td>3.5</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>8</td>
+          <td>5</td>
+          <td>110</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td>7.8</td>
+          <td>3.8</td>
+          <td>52</td>
+        </tr>
+        <tr>
+          <td>2021</td>
+          <td>12</td>
+          <td>8</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>2022</td>
+          <td>15</td>
+          <td>11</td>
+          <td>270</td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function dropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("show");
+      }
+
+      function dash() {
+        document.getElementById("h1").className += " active";
+        document.getElementById("h2").classList.remove("active");
+        document.getElementById("h3").classList.remove("active");
+      }
+      function graphJS() {
+        document.getElementById("h1").classList.remove("active");
+        document.getElementById("h2").className += " active";
+        document.getElementById("h3").classList.remove("active");
+      }
+      function producT() {
+        document.getElementById("h1").classList.remove("active");
+        document.getElementById("h2").classList.remove("active");
+        document.getElementById("h3").className += " active";
+      }
+
+      function dashboard() {
+        document.getElementById("card").style.display = "block";
+        document.getElementById("graph").style.display = "none";
+        document.getElementById("product").style.display = "none";
+      }
+      function graph() {
+        document.getElementById("graph").style.display = "block";
+        document.getElementById("card").style.display = "none";
+        document.getElementById("product").style.display = "none";
+      }
+      function product() {
+        document.getElementById("product").style.display = "block";
+        document.getElementById("card").style.display = "none";
+        document.getElementById("graph").style.display = "none";
+      }
+      document.getElementById("chart").style.width = "900px";
+      document.getElementById("chart").style.marginTop = "-15px";
+    </script>
+  </body>
+</html>

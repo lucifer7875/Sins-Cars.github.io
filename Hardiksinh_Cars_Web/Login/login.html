@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./login.css" />
+    <title>Login</title>
+    <style>
+      @media only screen and (max-width: 600px) {
+        div#buy {
+          margin-left: 100px;
+          height: 166px;
+          width: 233px;
+          padding: 6px;
+        }
+        span.span2 {
+          font-size: 15px;
+        }
+        span.span1 {
+          font-size: 10px;
+        }
+        form.form {
+          margin: 215px 16px;
+          width: 300px;
+          height: 430px;
+        }
+        img#companyLogo {
+          width: 200px;
+          margin-left: 21px;
+        }
+        h4.h4 {
+          display: none;
+        }
+        button.btn {
+          width: 238px;
+          margin-top: -29px;
+        }
+        div#lable {
+          margin-left: 10px;
+        }
+        div#lab1 {
+          width: 220px;
+        }
+        div.container {
+          margin-left: -25px;
+          margin-top: -26px;
+          width: 261px;
+        }
+        span.span {
+          display: none;
+        }
+        img.img {
+          display: none;
+        }
+      }
+      #buy {
+        position: fixed;
+        background: rgb(0 0 0 / 62%);
+        margin-left: 1082px;
+        width: 395px;
+        height: 305px;
+        margin-top: 60px;
+        padding: 12px;
+        color: #fff;
+      }
+      .span2 {
+        font-size: 30px;
+      }
+      .span1 {
+        font-size: 20px;
+      }
+      .form {
+        display: none;
+        position: fixed;
+        width: 600px;
+        border-style: none;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 65px 47px;
+        color: #000;
+        box-shadow: 1px 7px 14px 1px #0a0a0a;
+        background-color: #f8f8ffd6;
+      }
+      .btn {
+        width: 500px;
+      }
+
+      .span {
+        color: gray;
+        margin: 0px 203px;
+      }
+
+      .form-check {
+        margin: 0px 183px;
+      }
+
+      .img {
+        position: relative;
+        margin-top: 662px;
+        width: 200px;
+        animation-name: img;
+        animation-duration: 4s;
+      }
+
+      @keyframes img {
+        0% {
+          left: 1500px;
+        }
+
+        100% {
+          left: 0px;
+        }
+      }
+      #btn5 {
+        background-color: #0eb5dc;
+        /* transition: width 2s, height 2s, transform 2s; */
+        border-style: none;
+        color: white;
+        width: 140px;
+        height: 45px;
+      }
+      #companyLogo {
+        width: 336px;
+        margin-top: -27px;
+        margin-left: 91px;
+        border-radius: 16px;
+      }
+      /* #btn5:hover {
+        transform: rotate(360deg);
+      } */
+    </style>
+  </head>
+  <body>
+    <img
+      src="../../assets/car-wp-unplash.5d6c3f6f09c059.01352051.png"
+      alt=""
+      style="position: fixed; width: 1540px; height: 800px"
+    />
+
+    <div id="buy">
+      <span style="margin-left: 58px" class="span2">cl!ck To Buy</span>
+      <br /><br />
+      <span class="span1"
+        >India’s 1st end to end online car buying platform</span
+      >
+      <br />
+      <span class="span1">Select your dream car for contactless delivery!</span>
+      <div style="display: flex; justify-content: center; margin-right: 27px">
+        <button id="btn5">New Car</button>
+        <button id="btn5" style="margin-left: 10px">Pre-Owned Car</button>
+      </div>
+    </div>
+    <button onclick="fun()" style="position: fixed" id="btn5">login</button>
+
+    <form action="../Api/login.php" class="form" id="form" method="post">
+      <img id="companyLogo" src="../../assets/logo 2.jpg" alt="sins cars" />
+      <br /><br />
+      <h4 style="margin: 0px 165px" class="h4">Please Sign in</h4>
+
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="Email"
+          aria-describedby="emailHelp"
+          name="email"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="Password"
+          name="password"
+        />
+      </div>
+      <div class="mb-3 form-check" id="lable">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label
+          class="form-check-label"
+          id="lab1"
+          for="exampleCheck1"
+          style="width: 161px; margin-bottom: 7px"
+          >Remember me</label
+        >
+      </div>
+
+      <button onclick="check()" class="btn btn-primary">Sign In</button>
+      <br /><br />
+
+      <div class="container signin">
+        <p>
+          New User Register First.
+          <a href="../Register/register.html">Sign up</a>.
+        </p>
+      </div>
+      <span class="span">@2017-2019</span>
+    </form>
+    <img src="../../assets/CAR.png" alt="" class="img" />
+    <script>
+      function fun() {
+        var x = document.getElementById("form");
+        x.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

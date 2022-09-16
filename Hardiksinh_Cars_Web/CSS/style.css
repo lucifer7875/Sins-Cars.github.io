@@ -1,0 +1,149 @@
+.companyLogo {
+  width: 124px;
+  border-radius: 10px;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.21);
+}
+
+.bi:hover {
+  background-color: rgba(0, 0, 0, 0.21);
+}
+
+.socialMedia {
+  background-color: #332f2f8a;
+  margin: 170px 0px 0px 1445px;
+  padding: 18px 20px 18px 12px;
+  position: fixed;
+}
+
+#id :hover {
+  padding: 18px 0px 18px 18px;
+  font-size: 30px;
+}
+
+.thar {
+  position: inherit;
+  width: 1520px;
+  margin-top: -100px;
+  height: 619px;
+}
+
+.tharDetails {
+  margin: -413px 0px 0px 1067px;
+  position: absolute;
+  color: #fff;
+}
+
+.tharCallBtn {
+  width: 220px;
+  height: 53px;
+  font-size: larger;
+  padding: 10px 10px 9px 10px;
+  border-radius: 25px;
+  border-style: none;
+  background-color: gold;
+  font-family: cursive;
+}
+
+.sitPerson_Para {
+  position: absolute;
+  width: 808px;
+  margin: -247px 0px 0px 594px;
+  background-color: #1c6db6;
+  padding: 39px 40px 64px 70px;
+  color: white;
+  border-radius: 20px;
+}
+
+/* telephone css */
+.telePhone {
+  width: 75px;
+  height: 42px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #2aa92a;
+  animation: telePo 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes telePo {
+  0% {
+    transform: translate(2px, 2px) rotate(10deg);
+  }
+
+  25% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-4px, 4px) rotate(-10deg);
+  }
+
+  75% {
+    transform: translate(5px, 1px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(10deg);
+  }
+}
+
+/* flip cars css */
+
+.carsInformation {
+  border-style: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  background-color: #1c6db6;
+  color: white;
+  margin-left: 10px;
+}
+
+.flip-car {
+  width: 450px;
+  height: 300px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 450px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  margin-left: 20px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: rgba(253, 7, 7, 0.575);
+  color: black;
+}
+
+.flip-box-back {
+  color: white;
+  transform: rotateY(180deg);
+  padding: 10px;
+}

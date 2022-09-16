@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+    .mySlides{
+        margin-top: 129PX;
+        margin-left: -98PX;
+    }
+    .header{
+        width: 100vw;
+    }
+.slowgan{
+    margin-top: 345px;
+    font-size: 18px;
+    margin-left: 37px; 
+}
+.h2{
+    margin-top: 404px;
+    margin-left: 68px;
+    font-size: 19px;
+}
+.span{
+   
+    margin-left: 111px;
+    margin-top: 448px;
+    font-size: 14px;
+}
+.mainImg{
+    margin-top: 485px;
+}
+  }

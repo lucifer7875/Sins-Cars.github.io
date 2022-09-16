@@ -1,0 +1,179 @@
+.header {
+  /* background-color: rgb(227 18 18 / 5%); */
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  background: linear-gradient(-30deg, #810ee547, #e50a0a95, #0dec2375, #0cbde583);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mobile,
+.location,
+.email,
+.login,
+.register,
+.facebook,
+.twitter,
+.whatsapp {
+  text-decoration: none;
+  color: black;
+  font-style: normal;
+  margin-right: 10px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.12);
+  color: #7f8997;
+  display: block;
+  padding: 1rem 0;
+}
+
+.slowgan {
+  font-family: monospace;
+  position: absolute;
+  margin-top: 540px;
+  text-decoration: overline;
+  margin-left: 450px;
+  color: cornsilk;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.322);
+  animation: mymove 3s;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@keyframes mymove {
+  from {
+    left: -1100px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+.chatBotButton {
+  position: fixed;
+  margin: 652px 0px 0px 1414px;
+  width: 63px;
+  border-style: none;
+  border-radius: 30px;
+}
+
+.chatbot {
+  width: 63px;
+  margin-left: -6px;
+  border-radius: 30px;
+}
+
+.text {
+  position: absolute;
+  margin-top: -120px;
+  color: white;
+  padding: 0px 0px 0px 15px;
+  transition: width 1s, height 1s;
+}
+
+.Conference {
+  width: 450px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+
+.Conference:hover {
+  transition: width 1s ease-out;
+  width: 500px;
+}
+
+.h2 {
+  height: 70px;
+  font-family: initial;
+  margin-left: 520px;
+  animation: myfirst 3s;
+  animation-direction: normal;
+  margin-top: 680px;
+  position: absolute;
+  background-color: #7f899770;
+  padding: 10px;
+}
+
+@keyframes myfirst {
+  from {
+    right: -800px;
+  }
+
+  to {
+    right: 612px;
+  }
+}
+
+.span {
+  font-family: initial;
+  margin-left: 613px;
+  animation: spanmove 3s;
+  margin-top: 726px;
+  position: absolute;
+
+}
+
+@keyframes spanmove {
+  from {
+    left: -1100px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+.imgbtn {
+  position: absolute;
+  background: #13b813;
+  border-style: none;
+  margin: 15px;
+  font-size: large;
+  border-radius: 30px;
+  color: white;
+  width: 150px;
+  height: 40px;
+}
+
+.Conference1 {
+  width: 450px;
+  height: 300px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  transition: width 0.3s, height 0.3s;
+}
+
+.Conference1:hover {
+  transition: width 1s, height 1s ease-out;
+  width: 500px;
+  height: 335px;
+}
+
+.mySlides {
+  display: none;
+}
+.mainImg{
+  margin-top: 750px;
+   position: absolute; 
+  margin-left: 50px;
+}
